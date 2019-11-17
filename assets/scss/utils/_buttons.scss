@@ -1,0 +1,14 @@
+.button {
+    padding:1em 1.618em 1em 1.618em;
+    background: #5bcfdd;
+    color: $color-main-bg;
+    text-decoration: none;
+    display:inline-block;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    &:hover, &:focus{
+        color:#fff;
+        background:#000;
+        box-shadow: inset 0 0 0 5px #5bcfdd;
+    }
+}
