@@ -1,0 +1,43 @@
+.tint {
+    position: relative;
+    float: left;
+    /* Firefox */
+    box-shadow: 0px 0px 10px #000000;
+    &:before {
+      
+        background: rgba(26,26,26,0.8);
+        opacity: 0;
+        color: #FFF;
+        padding-top: 25%;
+        font-size: 2em;
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        height: auto;
+        right: 0;
+        overflow: hidden;
+        animation-name: fadeIn;
+    
+    
+    }
+    &:hover {
+        /* Firefox */
+        -webkit-animation-name: myanimation;
+        animation-name: myanimation;
+        animation-duration: 1s;
+        -webkit-transform-style: preserve-3d;
+        animation-direction: alternate;
+        animation-iteration-count: once;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+        background: rgba(13, 93, 103, 0.9);
+        opacity: 1;
+        height: 55%;
+        &:before{
+            opacity:1;
+        }
+    }
+    
+}

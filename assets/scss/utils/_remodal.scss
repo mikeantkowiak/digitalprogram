@@ -1,0 +1,576 @@
+/*
+*  Remodal - v1.0.6
+*  Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
+*  http://vodkabears.github.io/remodal/
+*
+*  Made by Ilya Makarov
+*  Under MIT License
+*/
+
+/* ==========================================================================
+ Remodal's necessary styles
+ ========================================================================== */
+
+/* Hide scroll bar */
+
+html.remodal-is-locked {
+  overflow: hidden;
+
+  -ms-touch-action: none;
+  touch-action: none;
+}
+
+/* Anti FOUC */
+
+.remodal,
+[data-remodal-id] {
+  display: none;
+
+}
+
+/* Necessary styles of the overlay */
+
+.remodal-overlay {
+  position: fixed;
+  z-index: 200000000;
+  top: -5000px;
+  right: -5000px;
+  bottom: -5000px;
+  left: -5000px;
+
+  display: none;
+}
+
+/* Necessary styles of the wrapper */
+
+.remodal-wrapper {
+  position: fixed;
+  z-index: 2000000000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: none;
+  overflow: auto;
+
+  text-align: center;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.remodal-wrapper:after {
+  display: inline-block;
+
+  height: 100%;
+  margin-left: -0.05em;
+
+  content: "";
+}
+
+/* Fix iPad, iPhone glitches */
+
+.remodal-overlay,
+.remodal-wrapper {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Necessary styles of the modal dialog */
+
+.remodal {
+  position: relative;
+
+  outline: none;
+  overflow: auto;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+.remodal-is-initialized {
+  /* Disable Anti-FOUC */
+  display: inline-block;
+}
+
+
+
+
+/* Fix iPad, iPhone glitches */
+
+.remodal-overlay,
+.remodal-wrapper {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Necessary styles of the modal dialog */
+
+.remodal {
+  position: relative;
+
+  outline: none;
+overflow: auto;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%; 
+}
+
+.remodal-is-initialized {
+  /* Disable Anti-FOUC */
+  display: inline-block;
+}
+
+
+
+.wrapper {
+
+  -webkit-transform: translateZ(0);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  /* webkit flicker fix */
+  -webkit-font-smoothing: antialiased;
+  /* webkit text rendering fix */
+
+  .tooltip {
+    position: absolute;
+    width: 80%;
+    bottom: 100%;
+    font-weight:700;
+    //bottom: 100%;
+    background: $color-site-branding;
+    color: #262626;
+    display: block;
+    margin-bottom: 15px;
+    opacity: 0;
+    padding: 20px;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: all .25s ease-out;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    h3{
+        font-family: azo-sans-web, Arial, Helvetica, sans-serif;
+      font-size:1em;  
+      font-weight:900;
+    }
+    a{
+      color: $color-main-nav;
+      font-family: azo-sans-web, Arial, Helvetica, sans-serif;
+      font-size:0.8em;  
+      cursor:pointer;
+    }
+    /* This bridges the gap so you can mouse into the tooltip without it disappearing */
+    &:before {
+      bottom: -20px;
+      content: " ";
+      display: block;
+      height: 20px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+    /* CSS Triangles - see Trevor's post */
+    &:after {
+      border-left: solid transparent 10px;
+      border-right: solid transparent 10px;
+      border-top: solid #5bcfdd 10px;
+      bottom: -10px;
+      content: " ";
+      height: 0;
+      left: 50%;
+      margin-left: -13px;
+      position: absolute;
+      width: 0;
+    }
+  }
+}
+
+
+
+
+.wrapper:hover .tooltip,
+.wrapper:focus .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+/* IE can just show/hide with no transition */
+.lte8 .wrapper .tooltip {
+  display: none;
+}
+
+.lte8 .wrapper:hover .tooltip {
+  display: block;
+}
+
+
+
+
+
+/*
+*  Remodal - v1.0.6
+*  Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
+*  http://vodkabears.github.io/remodal/
+*
+*  Made by Ilya Makarov
+*  Under MIT License
+*/
+
+/* ==========================================================================
+ Remodal's default mobile first theme
+ ========================================================================== */
+
+/* Default theme styles for the background */
+
+.remodal-bg.remodal-is-opening,
+.remodal-bg.remodal-is-opened {
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+}
+
+/* Default theme styles of the overlay */
+
+.remodal-overlay {
+  background: rgba(43, 46, 56, 0.9);
+}
+
+.remodal-overlay.remodal-is-opening,
+.remodal-overlay.remodal-is-closing {
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.remodal-overlay.remodal-is-opening {
+  -webkit-animation-name: remodal-overlay-opening-keyframes;
+  animation-name: remodal-overlay-opening-keyframes;
+}
+
+.remodal-overlay.remodal-is-closing {
+  -webkit-animation-name: remodal-overlay-closing-keyframes;
+  animation-name: remodal-overlay-closing-keyframes;
+}
+
+/* Default theme styles of the wrapper */
+
+.remodal-wrapper {
+  padding: 0;
+}
+
+/* Default theme styles of the modal dialog */
+
+.remodal {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  max-width:100%;
+  margin-bottom: 0px;
+  padding: 35px;
+
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  height: 100%;
+  color: #2b2e38;
+  background: #fff;
+  text-align: center;
+  .port-img{
+      width:100%;
+        img{
+          max-width:100%;
+          width:100%;
+        }
+      }
+  }
+}
+
+.remodal.remodal-is-opening,
+.remodal.remodal-is-closing {
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.remodal.remodal-is-opening {
+  -webkit-animation-name: remodal-opening-keyframes;
+  animation-name: remodal-opening-keyframes;
+}
+
+.remodal.remodal-is-closing {
+  -webkit-animation-name: remodal-closing-keyframes;
+  animation-name: remodal-closing-keyframes;
+}
+
+/* Vertical align of the modal dialog */
+
+.remodal,
+.remodal-wrapper:after {
+  vertical-align: middle;
+}
+
+/* Close button */
+
+.remodal-close {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+  overflow: visible;
+
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+
+  cursor: pointer;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  text-decoration: none;
+
+  color: #95979c;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+.remodal-close:hover,
+.remodal-close:focus {
+  color: #2b2e38;
+}
+
+.remodal-close:before {
+  font-family: azo-sans-web;
+  font-size: 25px;
+  line-height: 35px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+
+  width: 35px;
+
+  content: "\00d7";
+  text-align: center;
+}
+
+/* Dialog buttons */
+
+.remodal-confirm,
+.remodal-cancel {
+  font: inherit;
+
+  display: inline-block;
+  overflow: visible;
+
+  min-width: 110px;
+  margin: 0 0 2em 0;
+  padding: 12px 0;
+  left: 50%;
+  right: 50%;
+  cursor: pointer;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+
+  border: 0;
+  outline: 0;
+}
+
+.remodal-confirm {
+  color: #fff;
+  background: #5bcfdd;
+}
+
+.remodal-confirm:hover,
+.remodal-confirm:focus {
+  background: #66bb6a;
+}
+
+.remodal-cancel {
+  color: #fff;
+  background: #e57373;
+}
+
+.remodal-cancel:hover,
+.remodal-cancel:focus {
+  background: #ef5350;
+}
+
+/* Remove inner padding and border in Firefox 4+ for the button tag. */
+
+.remodal-confirm::-moz-focus-inner,
+.remodal-cancel::-moz-focus-inner,
+.remodal-close::-moz-focus-inner {
+  padding: 0;
+
+  border: 0;
+}
+
+
+/* Custom CSS */
+.modal-content {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  text-align:center;
+  p {
+      color: #000;
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 2em;
+  
+  }
+}
+
+/* Keyframes
+ ========================================================================== */
+
+@-webkit-keyframes remodal-opening-keyframes {
+  from {
+      -webkit-transform: translateX(2000px);
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05);
+      transform: translateX(2000px);
+      opacity: 1;
+  }
+
+  to {
+      -webkit-transform: translateX(0px);
+      -webkit-transform: none;
+      transform: none;
+
+      opacity: 1;
+  }
+}
+
+@keyframes remodal-opening-keyframes {
+  from {
+      -webkit-transform: translateX(2000px);
+      -webkit-transform: scale(2);
+      transform: scale(1.05);
+      transform: translateX(2000px);
+      opacity: 1;
+  }
+
+  to {
+      -webkit-transform: translateX(0px);
+      -webkit-transform: none;
+      transform: none;
+      transform: translateX(0px);
+      opacity: 1;
+  }
+}
+
+@-webkit-keyframes remodal-closing-keyframes {
+  from {
+
+      -webkit-transform: translateX(0px);
+      -webkit-transform: none;
+      transform: none;
+      transform: translateX(0px);
+      opacity: 1;
+  }
+
+  to {
+      -webkit-transform: translateX(-2000px);
+      -webkit-transform: scale(2);
+      transform: scale(1.05);
+      transform: translateX(-2000px);
+      opacity: 1;
+
+  }
+
+}
+
+@keyframes remodal-closing-keyframes {
+  from {
+      -webkit-transform: translateX(0px);
+      -webkit-transform: none;
+      transform: none;
+      transform: translateX(0px);
+      opacity: 1;
+  }
+
+  to {
+
+      -webkit-transform: translateX(-2000px);
+      -webkit-transform: scale(2);
+      transform: scale(1.05);
+      transform: translateX(-2000px);
+      opacity: 1;
+
+
+
+  }
+}
+
+@-webkit-keyframes remodal-overlay-opening-keyframes {
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes remodal-overlay-opening-keyframes {
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 1;
+  }
+}
+
+@-webkit-keyframes remodal-overlay-closing-keyframes {
+  from {
+      opacity: 1;
+  }
+
+  to {
+      opacity: 0;
+  }
+}
+
+@keyframes remodal-overlay-closing-keyframes {
+  from {
+      opacity: 1;
+  }
+
+  to {
+      opacity: 0;
+  }
+}
+
+/* Media queries
+ ========================================================================== */
+
+@media only screen and (min-width: 641px) {
+  .remodal {
+      max-width: 1000%;
+  }
+}
+
+/* IE8
+ ========================================================================== */
+
+.lt-ie9 .remodal-overlay {
+  background: #2b2e38;
+}
+
+.lt-ie9 .remodal {
+  width: 700px;
+}

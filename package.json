@@ -1,0 +1,26 @@
+{
+  "name": "digitalprogram",
+  "version": "1.0.0",
+  "description": "Base Portfolio Site",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browsersync": "^0.0.1-security",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^gulp 4.0.2",
+    "gulp-sass": "^4.0.2",
+    "modularscale-sass": "^3.0.10"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://digitalprogram@bitbucket.org/digitalprogram/digitalprogram.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/digitalprogram/digitalprogram#readme"
+}

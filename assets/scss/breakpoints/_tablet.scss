@@ -1,0 +1,70 @@
+h1 {
+	font-size: 2.4em;
+}
+.header-info h2 {
+	font-size: 1em;
+}
+h3 {
+	font-size: 0.8em;
+}
+section {
+	&#contact {
+		width: 40%;
+		margin-top: 10em;
+	}
+}
+#site-logo {
+	width: 200px;
+	height: 200px;
+}
+
+nav{
+	ul {
+		font-size: 1.68em;
+	}
+} 
+
+#content{
+	width:70%;
+}
+
+.modal-content {
+	width: 70%;
+
+}
+.ma-grid { 
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.span_3_of_3,
+.span_2_of_3,
+.span_1_of_3 {
+	width: 32.2%;
+}
+
+.left-image{
+	width: 55%;
+	left:-80%;
+	top:0;
+	&-2 {
+		text-align:right;
+		.content-block {
+			width: 49%;
+		}
+	}
+	&.hero-3 {
+		left: 0;
+		top: -110px;
+	
+	}
+}
+.right-image {
+	width: 63%;
+    right: -168px;
+	top: -110px;
+	&-2 {
+		.content-block {
+			width: 50%;
+		}
+	} 
+}	
