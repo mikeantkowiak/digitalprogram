@@ -21,7 +21,6 @@
     </script>
 
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="assets/scss/utils/parallax.css">
 </head>
 
 <body style="display:none;">
@@ -33,11 +32,13 @@
                     <div class="container">
                         <h1>Michael Antkowiak</h1>
                         <h2>UI Designer and Developer.</h2>
-                        <p class="coming-soon-text">Coming Soon!</p>
+                        <p class="coming-soon-text">
+                            <a href="#development" class="arrow-down"></a>
+                        </p>
                     </div>
                 </div>
             </div>
-   <!--          <div id="nav-anchor"></div>
+            <div id="nav-anchor"></div>
             <nav>
                 <ul>
                     <li><a href="#development">DEVELOPMENT</a></li>
@@ -48,270 +49,442 @@
             </nav>
             <div id="content">
                 <div id="development" class="full-container animatedParent animateOnce">
-                    <div class="right-image-2 animated bounceInTop delay-500">
-                        <div class="content-block">
-                            <h1>Development</h1>
-                            <h2>Website Design, Full Stack Development, UI/UX</h2>
-                            <p>I am a seasoned website designer/developer. I have a serious passion for web design, UI
-                                effects, animations and creating intuitive, dynamic user experiences.</p>
-                            <p>I can confidently take ideas from initial concepts to final production ready code. I have
-                                done work in software development, front-end/back-end web, and database/server
-                                management.</p>
-                            <p> Some of the tools I use regularly include: HTML/SCSS, JS, PHP, LARAVEL, WORDPRESS,
-                                BOOTSTRAP, GIT.</p>
+                    <div class="ma-grid portfolio-holder-grid">
+                        <div class="portfolio-content animated bounceInTop delay-500">
+                            <div class="content-block">
+                                <h1>Development</h1>
+                                <h2>Website Design, Full Stack Development, UI/UX</h2>
+                                <p>I am a proficient website designer/developer that can take ideas from vision to relatity. 
+                                    With over 13 years experience, I know what it takes to make great UI/UX that work on all 
+                                    devices and follow best coding practices. My work is always up to standards when it comes 
+                                    to the ever changing landscape of web technologies. 
+                                </p>
+                                <p><span class="primary-color">Language Experience</span><br>HTML, SCSS/LESS, JS, PHP, ACTIONSCRIPT</p>
+                                <p><span class="primary-color">Tool Experience</span><br>Wordpress, Laravel, Git, Gulp, NPM, Vue, Angular, jQuery</p>
+                            </div>
+                        </div>
+                        <div class="portfolio-main-image animated bounceInLeft">
+                            <div>
+                                <img src="assets/img/branding-3.png" class="port-img">
+                            </div>
                         </div>
                     </div>
-                    <div class="right-image hero-3 animated bounceInLeft"></div>
-                </div>
-                <section>
-
-                    <div class="ma-grid animatedParent animateOnce ">
-                    
+                    <div class="ma-grid ma-grid-portfolio animatedParent animateOnce ">
                         <div class="col animated flipInY delay-250 wrapper">
                             <div class="tooltip">
-                                <h3>Hive Media Influencer Dashboard</h3>
+                                <h3>Hive Media Group<br>
+                                    Influencer Dashboard</h3>
                                 <a data-remodal-target="hmg-dashboard-modal">View Details</a>
                             </div>
-                           
 
                             <a data-remodal-target="hmg-dashboard-modal">
                                 <div class="tint">
                                     <img src="assets/img/interactive-9.jpg" alt="" class="portfolio-img" />
                                 </div>
-                            </a>                            
-
+                            </a>
                         </div>
-                        <div class="col animated flipInY delay-500  wrapper">
-                                <div class="tooltip">
-                                        <h3>Macneil Dentisty</h3>
-                                        <a data-remodal-target="hmg-dashboard-modal">View Details</a>
-        
-                                    </div>
-                            <a data-remodal-target="hmg-dashboard-modal">
-                                <div class="tint">
-                                    <img src="assets/img/interactive-7.jpg" alt="" class="portfolio-img" />
-                                </div>
-                            </a>    
-
-                        </div>
-                        <div class="col animated flipInY delay-750  wrapper">
-                                <div class="tooltip">
-                                    <h3>At Sports Website</h3>
-                                    <a data-remodal-target="hmg-dashboard-modal">View Details</a>
-
-                                </div>
-                                <a data-remodal-target="hmg-dashboard-modal">
-                                    <div class="tint">
-                                        <img src="assets/img/interactive-4.jpg" alt="" class="portfolio-img" />
-                                    </div>
-                                </a>    
-
-                        </div>
-                        <div class="col animated flipInY delay-1000  wrapper">
+                        <div class="col animated flipInY delay-500 wrapper">
                             <div class="tooltip">
-                                <h3>Vicwest Metal Roofing</h3>
-                                <a data-remodal-target="hmg-dashboard-modal">View Details</a>
+                                <h3>At Sports Website</h3>
+                                <a data-remodal-target="at-sports-modal">View Details</a>
                             </div>
-                                <a data-remodal-target="hmg-dashboard-modal">
-                                    <div class="tint">
-                                        <img src="assets/img/interactive-5.jpg" alt="" class="portfolio-img" />
-                                    </div>
-                                </a>    
-                          
+                            <a data-remodal-target="at-sports-modal">
+                                <div class="tint">
+                                    <img src="assets/img/interactive-4.jpg" alt="" class="portfolio-img" />
+                                </div>
+                            </a>
                         </div>
-                    
-                       
-                        <div class="col animated flipInY delay-1250 wrapper">
+                        <div class="col animated flipInY delay-1000 wrapper">
                             <div class="tooltip">
                                 <h3>Hive Media Group Websites</h3>
-                                <a data-remodal-target="hmg-dashboard-modal">View Details</a>
+                                <a data-remodal-target="hmg-websites-modal">View Details</a>
+                            </div>
+                            <a data-remodal-target="hmg-websites-modal">
+                                <div class="tint">
+                                    <img src="assets/img/interactive-8.jpg" alt="" class="portfolio-img" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col animated flipInY delay-1250 wrapper">
+                                <div class="tooltip">
+                                    <h3>Macneil Dentisty</h3>
+                                    <a href="http://macneilldentistry.com/" target="_blank" title="Macneil Dentistry Website">Launch Website</a>
+    
+                                </div>
+                                <a href="http://macneilldentistry.com/" target="_blank" title="Macneil Dentistry Website">
+                                    <div class="tint">
+                                        <img src="assets/img/interactive-7.jpg" alt="" class="portfolio-img" />
+                                    </div>
+                                </a>
+                            </div>
+                        <div class="col animated flipInY delay-1500  wrapper">
+                            <div class="tooltip">
+                                <h3>Vicwest Metal Roofing</h3>
+                                <a href="http://vicwest.com/" target="_blank" title="Vicwest Website">Launch Website</a>
+                            </div>
+                            <a href="http://vicwest.com/" target="_blank" title="Macneil Dentistry Website">
+                                <div class="tint">
+                                    <img src="assets/img/interactive-5.jpg" alt="" class="portfolio-img" />
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="design" class="full-container animatedParent animateOnce">
+                    <div class="ma-grid portfolio-holder-grid">
+                        <div class="portfolio-content animated bounceInLeft  delay-500">
+                            <div class="content-block">
+                                <h1>Design & Branding</h1>
+                                <h2>Graphic Design and Illustration</h2>
+                                <p>I consider myself an all around creative individual that can take an idea from penicl and paper to final production.
+                                    I build memorable brands by creating brand identities, supporting marketing
+                                    materials, print materials and digital assets. </p>
+                                <p><span class="primary-color">Project Experience</span>
+                                    <br>Branding(Logos/Stationary/Websites), Banners, Brochures, Flyers, Print Ads, Vinyl Graphics, Appareal, Post Cards, Photo Manipulation, 3D Renderings,
+                                Illustration, Digital Media (eNewsletters, Banner Ads, Social Ads), Ads and more. </p>
 
                             </div>
-                            <a data-remodal-target="hmg-dashboard-modal">
-                                    <div class="tint">
-                                        <img src="assets/img/interactive-8.jpg" alt="" class="portfolio-img" />
-                                    </div>
-                                </a>   
-
                         </div>
-                        
-                        
+                        <div class="portfolio-main-image animated bounceInLeft">
+                                <div>
+                                    <img src="assets/img/branding-1.png" class="port-img">
+                                </div>
+                            </div>
                     </div>
-
-                </section>
-
-                <div id="design" class="full-container animatedParent animateOnce">
-                    <div class="right-image-2 animated bounceInLeft  delay-500">
-                        <div class="content-block">
-                            <h1>Design & Branding</h1>
-                            <h2>Research Design Print</h2>
-                            <p>A brand always begins with a vision and that vision is brought to life with a memorable
-                                logo. I help build brands by creating memorable brand identities, supporting marketing
-                                materials, print materials and digital assets. </p>
-                            <a href="#branding" class="button">View Projects</a>
-
-                        </div>
-                    </div>
-                    <div class="right-image hero-1 animated bounceInRight"></div>
-                </div>
-                <section>
-
-                    <div class="ma-grid animatedParent animateOnce ">
+                            <!-- Portfolio Items-->
+                    <div class="ma-grid ma-grid-portfolio animatedParent animateOnce ">
                         <div class="col animated flipInY delay-250">
-                            <img src="assets/img/web/logo-12.jpg" class="masonry-img" />
+                            <img src="assets/img/web/logo-12.jpg" class="portfolio-img tint" />
                         </div>
                         <div class="col animated flipInY delay-500">
-                            <img src="assets/img/web/logo-16.jpg" class="masonry-img" />
+                            <img src="assets/img/web/logo-16.jpg" class="portfolio-img tint" />
                         </div>
-
                         <div class="col animated flipInY delay-750">
-                            <img src="assets/img/web/logo-13.jpg" class="masonry-img" />
+                            <img src="assets/img/web/logo-13.jpg" class="portfolio-img tint" />
                         </div>
                         <div class="col animated flipInY delay-1000">
-                            <img src="assets/img/web/logo-4.jpg" class="masonry-img" />
+                            <img src="assets/img/web/logo-4.jpg" class="portfolio-img tint" />
                         </div>
                         <div class="col animated flipInY delay-1250">
-                            <img src="assets/img/web/logo-5.jpg" class="masonry-img" />
+                            <img src="assets/img/web/logo-5.jpg" class="portfolio-img tint" />
                         </div>
                         <div class="col animated flipInY delay-1500">
-                            <img src="assets/img/web/logo-14.jpg" class="masonry-img" />
+                            <img src="assets/img/web/logo-14.jpg" class="portfolio-img tint" />
                         </div>
                         <div class="col animated flipInY delay-1750">
-                            <img src="assets/img/web/logo-8.jpg" class="masonry-img" />
+                            <img src="assets/img/web/logo-8.jpg" class="portfolio-img tint" />
                         </div>
                         <div class="col animated flipInY  delay-2000">
-                            <img src="assets/img/web/logo-7.jpg" class="masonry-img" />
+                            <img src="assets/img/web/logo-7.jpg" class="portfolio-img tint" />
                         </div>
-                        <div class="col animated flipInY delay-2500">
-                            <img src="assets/img/web/logo-2.jpg" class="masonry-img" />
+                        <div class="col animated flipInY delay-2250">
+                            <img src="assets/img/web/logo-2.jpg" class="portfolio-img tint" />
                         </div>
-                        <div class="col animated flipInY">
-                            <img src="assets/img/web/logo-15.jpg" class="masonry-img" />
+                    </div>  
+                    <div class="ma-grid ma-grid-portfolio animatedParent animateOnce">
+                        <div class="col animated flipInY delay-250">
+                            <img src="assets/img/web/logo-15.jpg" class="portfolio-img tint" />
                         </div>
-                        <div class="col animated flipInY">
-                            <img src="assets/img/web/logo-11.jpg" class="masonry-img" />
+                        <div class="col animated flipInY delay-500">
+                            <img src="assets/img/web/logo-11.jpg" class="portfolio-img tint" />
                         </div>
-                        <div class="col animated flipInY">
-                            <img src="assets/img/web/logo-20.jpg" class="masonry-img" />
+                        <div class="col animated flipInY delay-750">
+                            <img src="assets/img/web/logo-20.jpg" class="portfolio-img tint" />
                         </div>
-                        <div class="col animated flipInY">
-                            <img src="assets/img/web/logo-17.jpg" class="masonry-img" />
+                        <div class="col animated flipInY delay-1000">
+                            <img src="assets/img/web/logo-17.jpg" class="portfolio-img tint" />
                         </div>
-                        <div class="col animated flipInY">
-                            <img src="assets/img/web/logo-9.jpg" class="masonry-img" />
+                        <div class="col animated flipInY delay-1250">
+                            <img src="assets/img/web/logo-9.jpg" class="portfolio-img tint" />
                         </div>
-                        <div class="col animated flipInY">
-                            <img src="assets/img/web/logo-10.jpg" class="masonry-img" />
+                        <div class="col animated flipInY  delay-1500">
+                            <img src="assets/img/web/logo-10.jpg" class="portfolio-img tint" />
                         </div>
-
-                        <div class="col animated flipInY">
-                            <img src="assets/img/web/logo-1.jpg" class="masonry-img" />
+                        <div class="col animated flipInY delay-1750">
+                            <img src="assets/img/web/logo-1.jpg" class="portfolio-img tint" />
                         </div>
-                        <div class="col animated flipInY">
-                            <img src="assets/img/web/logo-3.jpg" class="masonry-img" />
+                        <div class="col animated flipInY delay-2000">
+                            <img src="assets/img/web/logo-3.jpg" class="portfolio-img tint" />
                         </div>
-                        <div class="col animated flipInY">
-                            <img src="assets/img/web/logo-19.jpg" class="masonry-img" />
+                        <div class="col animated flipInY delay-2250">
+                            <img src="assets/img/web/logo-19.jpg" class="portfolio-img tint" />
                         </div>
-
-
                     </div>
-                </section>
-
+                </div>
                 <div id="multimedia" class="full-container animatedParent animateOnce">
-                    <div class="right-image-2 animated bounceInLeft  delay-500">
-                        <div class="content-block">
-                            <h1>Motion</h1>
-                            <h2>Motion Design, animations and visualizations</h2>
-                            <p>I am a passionate story teller and I use creative visuals and digital imagery to bring
-                                ideas to life. 3D rendering and animation have always been one of my biggest influences
-                                in the world of media. </p>
-                            <p>My work in the motion field ranges from explainer videos, look books, lower thrids, logo
-                                reveals, product explainers and more.</p>
-                            <p>Please watch my short demo reel below for samples of my motion work.</p>
+                        <div class="ma-grid portfolio-holder-grid">
+                            <div class="portfolio-content animated bounceInLeft delay-500">
+                                    <div class="content-block">
+                                        <h1>Motion</h1>
+                                        <h2>Motion Design, animations and visualizations</h2>
+                                        <p>I am a passionate story teller and I use creative visuals and digital imagery to bring
+                                            ideas to life. 3D rendering and animation have always been one of my biggest influences
+                                            in the world of media. </p>
+                                        <p>My work in the motion field ranges from explainer videos, look books, lower thrids, logo
+                                            reveals, product explainers and more.</p>
+                                        <p class="primary-color">Please select from the pieces below to launch youtube.</p>
+                                    </div>
+                                </div>
+                                <div class="portfolio-main-image animated bounceInLeft">
+                                        <div>
+                                            <img src="assets/img/1screen.png" class="port-img">
+                                        </div>
+                                    </div>
                         </div>
-                    </div>
-                    <div class="right-image hero-2 animated bounceInRight"></div>
+                        <div class="ma-grid ma-grid-portfolio">
+                                <div class="col animated flipInY delay-250 wrapper">
+                                    <div class="tooltip">
+                                        <h3>Life Design Analysis<br>
+                                            Explainer Video</h3>
+                                        <a href="https://www.youtube.com/watch?v=r2Pejdw1qzM" target="_blank">Watch Animation</a>
+                                    </div>
+                                    <a href="https://www.youtube.com/watch?v=r2Pejdw1qzM" target="_blank">
+                                    <img src="assets/img/design-v1.jpg" class="portfolio-img tint" />
+                                    </a>
+                                </div>
+                                <div class="col animated flipInY delay-500 wrapper">
+                                    <div class="tooltip">
+                                        <h3>Agentflux<br>
+                                            Explainer Video</h3>
+                                        <a href="https://www.youtube.com/watch?v=Cj_LCrz_kWE" target="_blank">Watch Animation</a>
+                                    </div>
+                                    <a href="https://www.youtube.com/watch?v=Cj_LCrz_kWE" target="_blank">
+                                        <img src="assets/img/design-v2.jpg" class="portfolio-img tint" />
+                                    </a>
+                                </div>
+                                <div class="col animated flipInY delay-750 wrapper">
+                                        <div class="tooltip">
+                                                <h3>Wavelength<br>
+                                                    Explainer Video</h3>
+                                                <a href="https://www.youtube.com/watch?v=_ABGgrBWlco" target="_blank">Watch Animation</a>
+                                            </div>
+                                    <a href="https://www.youtube.com/watch?v=_ABGgrBWlco" target="_blank">
+                                        <img src="assets/img/design-v3.jpg" class="portfolio-img tint" />
+                                    </a>
+                                </div>
+                        </div>
                 </div>
-                <section>
-                    <div class="youtube-container">
-                        <div class="youtube-player" data-id="r2Pejdw1qzM"></div>
-                    </div>
-
-                    <div class="ma-grid">
-                        <div class="col">
-                            <a data-remodal-target="modal7">
-                                <figure class="tint"><img src="assets/img/design-v1.jpg" alt="" class="portfolio-img" />
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="col">
-                            <a data-remodal-target="modal8">
-                                <figure class="tint"><img src="assets/img/design-v2.jpg" alt="" class="portfolio-img" />
-                                </figure>
-                            </a>
-                        </div>
-                        <div class="col">
-                            <a data-remodal-target="modal9">
-                                <figure class="tint"><img src="assets/img/design-v3.jpg" alt="" class="portfolio-img" />
-                                </figure>
-                            </a>
-                        </div>
-
-                        <div class="col"> <a href="#modal">
-                                <img src="assets/img/design-1.jpg" alt="" class="portfolio-img" /></a>
-                        </div>
-                        <div class="col"><a href="#modal">
-                                <img src="assets/img/design-2.jpg" alt="" class="portfolio-img" /></a>
-                        </div>
-                        <div class="col"><a href="#moda">
-                                <img src="assets/img/design-1.jpg" alt="" class="portfolio-img" /></a>
-                        </div>
-
+            </div>
+            <footer>
+                <section id="contact">
+                    <h3>UI Designer and Developer</h3>
+                    <hr class="title-block-hr" />
+                    <div id="portfolio-copy" class="group">
+                        <p>Thank you for giving me the opporitunity to showcase some of my favourite projects. I
+                            dedicated myself to my passion for creativity and design for the greater part of my life. I
+                            love graphic design, web design, development, animation, 3D and anything to do with
+                            creativity and art. In my spare time some artistic things I love doing include drawing,
+                            sculpting, and music production.</p>
+                        <p>My techincal skills range from Graphic Design, Website Design, Animation, 3D Visualization
+                            and Branding just to name a few. I can easily change hats and transition my designs from
+                            prototype graphics to workable, standardize, accessible code. When it comes to coding I am
+                            proficient in HTML5, CSS3, bootstrap, javascript and jquery techniques. I have worked on
+                            many Wordpress CMS type sites, creating themes from scratch and building plugins. There is
+                            nothing like a custom branded website or piece of art to tell people about your brand.
+                            <p>I love being able to create a design and bring it to life. Thank you again for looking
+                                through my work. Please contact me at info@mikeantkowiak.com for inquiries or if you
+                                would like to see some other projects. </p>
+                            <hr class="title-block-hr" />
+                            <ul class="soc">
+                                <li>
+                                    <a href="mailto:info@mikeantkowiak.com" class="icon-8 email" title="Email">
+                                        <svg viewBox="0 0 512 512">
+                                            <path
+                                                d="M101.3 141.6v228.9h0.3 308.4 0.8V141.6H101.3zM375.7 167.8l-119.7 91.5 -119.6-91.5H375.7zM127.6 194.1l64.1 49.1 -64.1 64.1V194.1zM127.8 344.2l84.9-84.9 43.2 33.1 43-32.9 84.7 84.7L127.8 344.2 127.8 344.2zM384.4 307.8l-64.4-64.4 64.4-49.3V307.8z" />
+                                        </svg>
+                                        <!--[if lt IE 9]><em>Email</em><![endif]--></a></li>
+                                <li>
+                                    <a href="https://ca.linkedin.com/in/mike-antkowiak-b844a537"
+                                        class="icon-17 linkedin" title="LinkedIn" target="_blank">
+                                        <svg viewBox="0 0 512 512">
+                                            <path
+                                                d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z" />
+                                        </svg>
+                                        <!--[if lt IE 9]><em>LinkedIn</em><![endif]--></a></li>
+                                <li>
+                                    <a href="https://hu.pinterest.com/antkowiak0518/" class="icon-20 pinterest"
+                                        title="Pinterest" target="_blank">
+                                        <svg viewBox="0 0 512 512">
+                                            <path
+                                                d="M266.6 76.5c-100.2 0-150.7 71.8-150.7 131.7 0 36.3 13.7 68.5 43.2 80.6 4.8 2 9.2 0.1 10.6-5.3 1-3.7 3.3-13 4.3-16.9 1.4-5.3 0.9-7.1-3-11.8 -8.5-10-13.9-23-13.9-41.3 0-53.3 39.9-101 103.8-101 56.6 0 87.7 34.6 87.7 80.8 0 60.8-26.9 112.1-66.8 112.1 -22.1 0-38.6-18.2-33.3-40.6 6.3-26.7 18.6-55.5 18.6-74.8 0-17.3-9.3-31.7-28.4-31.7 -22.5 0-40.7 23.3-40.7 54.6 0 19.9 6.7 33.4 6.7 33.4s-23.1 97.8-27.1 114.9c-8.1 34.1-1.2 75.9-0.6 80.1 0.3 2.5 3.6 3.1 5 1.2 2.1-2.7 28.9-35.9 38.1-69 2.6-9.4 14.8-58 14.8-58 7.3 14 28.7 26.3 51.5 26.3 67.8 0 113.8-61.8 113.8-144.5C400.1 134.7 347.1 76.5 266.6 76.5z" />
+                                        </svg>
+                                        <!--[if lt IE 9]><em>Pinterest</em><![endif]--></a>
+                                </li>
+                            </ul>
                     </div>
                 </section>
-            </div>
-        -->
-          
-        <div class="remodal" data-remodal-id="hmg-dashboard-modal" role="dialog" aria-labelledby="modal2Title"
-        aria-describedby="modal2Desc">
-        <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
-        <div class="modal-content">
-            <h2 id="modal1Title">Hive Media Group</h2>
-            <h3>Influencer Dashboard</h3>
-            <hr class="title-block-hr" />
-           <div class="port-img">
-               <img src="assets/img/branding-3.png" alt="">
-           </div>
-            <p id="modal1Desc">
-                    <p>Hive Media Group worked with many different influencers and this dashboard was created to collect and present data to both the influencers and the account managers. The main capabilities of the dashboard were to allow influencers to view post data in a intuitive user experience. It was also created as a CRM for account managers to view they're associated influencers and statistic. The managers had the ability to generated statistical reports, and revenue earning reports. </p>
-                    <h4>Technical Environment</h4>
-                    <p>Laravel, PHP, Javascript ( chart.js, datatables.js ), Bootstrap 3.0, Database Management, Git, Laravel Forge,   </p>
-            </p>
-            <hr class="title-block-hr" />
-          <!-- 
-            <div class="ma-grid">
-                <div class="col">Image of Assets</div>
-                <div class="col">
-                    <h2>Description</h2>
-                    <p>This is the description here of what the project involved.</p>
+            </footer>
+            <div class="remodal" data-remodal-id="hmg-dashboard-modal" role="dialog">
+                <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+                <div class="modal-content">
+                    <h2 id="modal1Title">Hive Media Group</h2>
+                    <h3>Influencer Dashboard</h3>
+                    <hr class="title-block-hr" />
+                    <div class="ma-grid project-grid">
+                        <div class="col port-img">
+                            <img src="assets/img/branding-3.png" alt="">
+                        </div>
+                        <div class="col">
+                            <h1>Project Overview</h1>
+                            <p>Hive Media Group was looking for an app where they could visualize and present data to both the influencers and the account managers. The
+                                main capabilities of the dashboard were to allow influencers to view post data in a
+                                intuitive user experience. An integrated CRM feature for account managers was implemented to view 
+                                associated influencers and statistic. The managers could generated
+                                statistical reports, and revenue earning reports. </p>
+                            <h4>Technical Environment</h4>
+                            <ul class="techinical-list">
+                                <li>
+                                    <p><span>Backend:</span> AWS, Ubuntu, Laravel Forge, Laravel 5</p>
+                                </li>
+                                <li>
+                                    <p><span>Front-end:</span> Design and Mockups, Custom SCSS and Bootstrap 3, gulp
+                                        for compiling</p>
+                                </li>
+                                <li>
+                                    <p><span>Javascript:</span> Custom integrations of DataTables.js and Chart.js
+                                    </p>
+                                </li>
+                                <li>
+                                    <p><span>Version Control:</span> BitBucket </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr class="title-block-hr" />
+
+                    <div class="ma-grid project-grid-lg-2">
+                        <div class="col">
+                            <h2>Living Style Guide</h2>
+                            <p>Aftr the initial designs were created and confirmed, the HTML, CSS and base js frontend frameworks were
+                                coded, customized and placed on a static website and kept in a independent git repository. The goal was to separate the design frontend framework from the 
+                                backend code for easier updated to overall branding, ui elements, and reusable components. 
+                                
+                            </p>
+                            <h4>Technical Environment</h4>
+                            <ul class="techinical-list">
+                                <li>
+                                    <p><span>SCSS Framework:</span> Bootstrap 3</p>
+                                </li>
+                                <li>
+                                    <p><span>Front-end:</span> HTML, Datatables.js, Chart.js </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col port-img">
+                                <img src="assets/img/branding-3.png" alt="">
+                            </div>
+                    </div>
                 </div>
-            </div> -->
+                <br>
+                <button data-remodal-action="confirm" class="remodal-confirm">Close</button>
+            </div>
+            <div class="remodal" data-remodal-id="at-sports-modal" role="dialog">
+                <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+                <div class="modal-content">
+                    <h2 id="modal1Title">AT Sports</h2>
+                    <h3>Media Publishing Website</h3>
+                    <hr class="title-block-hr" />
+                    <div class="ma-grid  project-grid-lg-2">
+                        <div class="col port-img">
+                            <img src="assets/img/branding-3.png" alt="">
+                        </div>
+                        <div class="col">
+                            <h1>Overview</h1>
+                            <p>AT Sports published original content from some of the Top Athletes(Richard Sherma, Julio Jones, Manny Pacquiao to name a few).
+                                My role in this project was to design and developer new components using php, js and scss. I assisted in building the wordpress theme and designed the UI/UX.</p>
+                            <p>The design process of creating components included multiple design variations, and once confirmed by the team, the components
+                                were implemented into the website.
+                            </p> 
+                            <h4>Technical Environment</h4>
+                            <ul class="techinical-list">
+                                <li>
+                                    <p><span>Front-end:</span> Custom SCSS and JS</p>
+                                </li>
+                                <li>
+                                    <p><span>Javascript and PHP:</span> Custom WP Plugin Development</p>
+                                </li>
+                                <li>
+                                    <p><span>Version Control:</span> BitBucket </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr class="title-block-hr" />
+                </div>
+                <br>
 
-        </div>
-        <br>
+                <button data-remodal-action="confirm" class="remodal-confirm">Close</button>
+            </div>
+            <div class="remodal" data-remodal-id="hmg-websites-modal" role="dialog">
+                    <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+                    <div class="modal-content">
+                        <h2 id="modal1Title">Hive Media Group</h2>
+                        <h3>Media Publishing Websites</h3>
+                        <hr class="title-block-hr" />
+                        <div class="ma-grid  project-grid-lg-2">
+                            <div class="col port-img">
+                                <img src="assets/img/branding-3.png" alt="">
+                            </div>
+                            <div class="col">
+                                <h1>Overview</h1>
+                                <p>My primary responsibility was taking design prototypes from XD, Figma or Photoshop and convert them into responsive child themes.
+                                    Standardizing SCSS between multiple themes and creating common styles so all properties could shared the same styled components.
+                                        I managed the front-end development of the child themes' look and feel, customization of custom JS Components
+                                        used to control page elements and ad layouts. Adding custom PHP/JS plugin functionality for components.
+                                        Some Ad tech dev projects setting up Ad partners and configuration of backend dev.
+                                </p> 
+                                <h4>Technical Environment</h4>
+                                <ul class="techinical-list">
+                                    <li>
+                                        <p><span>Front-end:</span> Custom SCSS and JS</p>
+                                    </li>
+                                    <li>
+                                            <p><span>CMS: </span>Wordpress</p>
+                                        </li>
+                                    <li>
+                                        <p><span>Version Control:</span> BitBucket </p>
+                                    </li>
+                                </ul>
+                                <h3>Websites</h3>
+                                <ul class="techinical-list">
+                                        <li><a href="http://trend-chaser.com" class="href" target="_blank">trend-chaser.com</a>
+                                        <li><a href="http://postfun.com" class="href" target="_blank">postfun.com</a>
+                                        <li><a href="http://tacorelish.com" class="href" target="_blank">tacorelish.com</a>
+                                        <li><a href="http://ricklaxpresents.com" class="href" target="_blank">ricklaxpresents.com</a>
+                                        <li><a href="http://thepunblog.com" class="href" target="_blank">thepunblog.com</a>
+                                        <li><a href="http://210lance.com" class="href" target="_blank">210lance.com</a>
+                                        <li><a href="http://moneypop.com" class="href" target="_blank">moneypop.com</a>
+                                        <li><a href="http://bleacherbreaker.com" class="href" target="_blank">bleacherbreaker.com</a>
+                                        <li><a href="http://purevolume.com" class="href" target="_blank">purevolume.com</a>
+                                        <li><a href="http://blog.auntyacid" class="href" target="_blank">blog.auntyacid.com</a>
+                                        <li><a href="http://getadictionary.com" class="href" target="_blank">getadictionary.com</a>
+                                        <li><a href="http://kyoot.com" class="href" target="_blank">kyoot.com</a>
+                                        <li><a href="http://menshumor.com" class="href" target="_blank">menshumor.com</a>
+                                        <li><a href="http://gamedaynews.com" class="href" target="_blank">gamedaynews.com</a>
+                                        <li><a href="http://bavardist.com" class="href" target="_blank">bavardist.com</a>
+                                        <li><a href="http://themystique.com" class="href" target="_blank">themystique.com</a>
+                                        <li><a href="http://brakeforit.com" class="href" target="_blank">brakeforit.com</a>
+                                        <li><a href="http://thisiswhyimsingle.com" class="href" target="_blank">thisiswhyimsingle.com</a>
+                                        <li><a href="http://factable.com" class="href" target="_blank">factable.com</a>
+                                        <li><a href="http://exploredplanet.com" class="href" target="_blank">exploredplanet.com</a>
+                                        <li><a href="http://dailyfunny.com" class="href" target="_blank">dailyfunny.com</a>
+                                        <li><a href="http://japacrunch.com" class="href" target="_blank">japacrunch.com</a>
+                                </ul>
 
-        <button data-remodal-action="confirm" class="remodal-confirm">Close</button>
-    </div>
+                            </div>
+                        </div>
+                        <hr class="title-block-hr" />
+                    </div>
+                    <br>
+    
+                    <button data-remodal-action="confirm" class="remodal-confirm">Close</button>
+                </div>
+            </div>
         </div>
     </main>
-
     <div id="loading">
         <div class="loadingDiv"></div>
     </div>
-
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="assets/js/myscript.js"></script>
     <script src="assets/js/remodal.js"></script>
@@ -321,9 +494,5 @@
 
     <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.js"></script>
     <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/scripts.js"></script>
-    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script> -->
 </body>
-
 </html>

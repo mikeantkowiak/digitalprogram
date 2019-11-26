@@ -13,13 +13,8 @@
 
 // Modular Scale https://www.modularscale.com/
 @import 'modularscale';
-$modularscale: (base: 1em,
+$modularscale: (base: 12px,
     gulratio: 1.618);
-
-
-
-
-
 
 /* BUTTONS */
 @import 'assets/scss/utils/buttons';
@@ -29,9 +24,7 @@ $modularscale: (base: 1em,
 
 /*animations*/
 
-
 /*theme*/
-
 @import 'assets/scss/theme/theme';
 
 
@@ -49,6 +42,7 @@ body {
     font-style: normal;
     text-align: center;
     background-size: cover;
+    line-height:1.4;
     margin: 0;
     padding: 0;
     font-family: azo-sans-web;
@@ -60,11 +54,10 @@ p {
     font-style: normal;
     font-variant: normal;
     font-weight: 100;
-    line-height: 20px;
     letter-spacing: 0.03em;
     color: #d6d6d6;
     margin-top: 0.25em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 .title-block-hr {
@@ -73,15 +66,9 @@ p {
     width: 180px;
     height: 3px;
     background: #efefef;
-    margin: 0 auto;
     border: none;
-    margin-bottom: 2em;
-    margin-top: 2em;
+    margin: 4em auto;
 
-}
-
-.remodal h2 {
-    color: #000;
 }
 
 .morepadd {
@@ -103,30 +90,29 @@ p {
 
 .full-container {
     position: relative;
-    height: 697px;
+    margin-bottom:8em;
+    &:after{
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
 }
 
-.right-image {
-    position: absolute;
-    width: 100%;
-    height: 749px;
-    background: url(assets/img/branding-1.png) no-repeat top center;
-    background-position: right;
-    background-size: contain;
-    right: 0px;
-    top: -360px;
-    z-index:-1;
-    &-2 {
-            .content-block {
-            width: 100%;
-            float: left;
-            padding-top: 7em;
-        }
-    }
+.portfolio-content  {
+    margin-bottom:4em;
+
+}
+.port-img{
+    max-width: 100%; height: auto 
+}
+
+.portfolio-main-image{
+
 }
 
 .left-image {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 800px;
     background: url(assets/img/1screen.png) no-repeat top center;
@@ -140,7 +126,7 @@ p {
     right: -80px;
     top: -110px;
     &-1{
-        background: url(assets/img/branding-1.png) no-repeat top center;
+        background: url() no-repeat top center;
         background-position: right;
         background-size: contain;
     }
@@ -176,18 +162,8 @@ p {
     padding-top: 3em;
 }
 
-.right-image-2 {
-    position: absolute;
-    padding-top: 0;
-    width: 100%;
-    height: 800px;
-    text-align: left;
-    background-size: contain;
-    background-position: left;
-}
-
 .left-image-2 {
-    position: absolute;
+    position: relative;
     padding-top: 3em;
     width: 99%;
     height: 800px;
@@ -201,9 +177,7 @@ p {
     background-size: cover;
     position: relative;
     background-position: center;
-
     background-repeat: no-repeat;
-
     -webkit-background-size: cover;
     -moz-background-size: cover;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/desktop.jpg', sizingMethod='scale');
@@ -285,13 +259,15 @@ p {
 }
 
 #content {
+    display:block;
     padding: 100px 1.618em 1.618em;
     text-align: center;
     width: auto;
+    box-sizing: border-box;
     margin: 0px auto;
 
     h2 {
-        margin: 0px 0px 30px 0px;
+        margin: 0 0 1em 0;
         letter-spacing: 0.1em;
     }
 
@@ -335,16 +311,14 @@ h5 {
 }
 
 h1 {
-    font-size: 1.4em;
+    font-size: ms(2);
     color: #5bcfdd;
     height: 1.4em;
 }
 
 h2 {
-    font-size: 0.8em;
+    font-size: ms(2);
     color: #FFFFFF;
-    line-height: 1.34;
-    padding-top: 0.18em;
 }
 
 footer p {
@@ -369,13 +343,42 @@ section#contact {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px 20px;
+    text-align:left;
+    margin-bottom:20px;
     &.portfolio-grid{
+        margin-top:2em; 
+        grid-template-columns: 1fr;
+        gap: 20px 20px;
+    }
+    &.portfolio-holder-grid{
+        margin-top:2em; 
+        grid-template-columns: 1fr;
+        gap: 20px 20px;
+    }
+    &.project-grid, &.project-grid-lg-2{
         margin-top:2em; 
         grid-template-columns: 1fr;
         gap: 20px 20px;
     }
 }
 
+.techinical-list{
+    margin:0;
+    padding:0;
+    li{
+        list-style:none;
+        color:#000;
+        margin-top:0.5em;
+        p{
+            margin:0.5em 0 0;
+            padding:0;
+            color:#000;
+            span{
+                color:$color-site-branding;
+            }
+        }
+    }
+}
 .col {
     img{
         width:100%;
@@ -442,7 +445,7 @@ section#contact {
 
 nav {
     opacity: 1;
-    background-color: #121212;
+    background-color:$color-main-nav-bg;
     min-height: auto;
 
 }
@@ -510,6 +513,14 @@ nav.stick {
 figure {
     margin: 0;
     padding: 0;
+}
+
+/*
+* HELPERS
+*/
+.modal-content{
+    max-width:1080px;
+    margin:0 auto;
 }
 
 
@@ -663,15 +674,13 @@ div.play-button {
 }
 
 /* ARROW CSS */
-.arrow {
+.arrow-down {
     position: relative;
     margin: 0 auto;
     margin-top: 3em;
     color: #c3c3c3;
     width: 40px;
-    height: 40px;
-    transform: rotate(90deg);
-    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9Ii02MyAtMTYgNTEyIDUxMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAtNjMgLTE2IDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0zMjYuMSwyMDMuMmMyMC4yLDIwLjIsMTkuOSw1My4yLTAuNiw3My43bDAsMGMtMjAuNSwyMC41LTUzLjUsMjAuOC03My43LDAuNmwtMTkwLTE5MEM0MS43LDY3LjMsNDIsMzQuNCw2Mi41LDEzLjhsMCwwQzgzLTYuNywxMTYtNi45LDEzNi4xLDEzLjNMMzI2LjEsMjAzLjJ6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTMyNi4xLDI3Ni44YzIwLjItMjAuMiwxOS45LTUzLjItMC42LTczLjdsMCwwYy0yMC41LTIwLjUtNTMuNS0yMC44LTczLjctMC42bC0xOTAsMTkwYy0yMC4yLDIwLjItMTkuOSw1My4yLDAuNiw3My43bDAsMGMyMC41LDIwLjUsNTMuNSwyMC44LDczLjcsMC42TDMyNi4xLDI3Ni44eiIvPjwvc3ZnPg==);
+    background: url(assets/img/arrow.svg) no-repeat;
     background-size: contain;
 }
 
@@ -704,24 +713,6 @@ section {
 
 .clearboth {
     clear: both;
-}
-
-/*Modal Styles */
-.remodal { 
-    font-family: azo-sans-web;
-    text-align: left;
-}
-
-.remodal a {
-    color: #000;
-}
-
-.remodal h4 {
-    font-size: 1.5em;
-}
-
-hr {
-    margin-bottom: 1em;
 }
 
 /*Social Icons SVG Code */

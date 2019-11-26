@@ -70,7 +70,7 @@ jQuery(document).ready(function ($) {
         $('.header').delay(1500).animate({
             top: "50%",
         }, 1000);
-        $('.coming-soon-text').delay(3500).animate({
+        $('.coming-soon-text').delay(1500).animate({
             opacity: "1",
         }, 1500);
 
@@ -130,12 +130,12 @@ jQuery(document).ready(function ($) {
         $("nav a").click(function (evn) {
             evn.preventDefault();
 
-            $('html,body').scrollTo(this.hash, this.hash, { offset: -58 });
+            $('html,body').scrollTo(this.hash, this.hash, { offset: -80});
         });
         $(".arrow-down").click(function (evn) {
             evn.preventDefault();
 
-            $('html,body').scrollTo(this.hash, this.hash, { offset: -58 });
+            $('html,body').scrollTo(this.hash, this.hash, { offset: -80 });
         });
 
 
@@ -185,5 +185,38 @@ jQuery(document).ready(function ($) {
     $.extend($.scrollTo.defaults, {
 
     });
+    // Site JS Scripts 
+    $(function () {
+        $("img.lazy").lazyload();
+    });
+    // external js: masonry.pkgd.js, imagesloaded.pkgd.js
+
+
+    $(document).ready(function () {
+
+        $('.loadingDiv').animate({
+            opacity: '1'
+        });
+
+        $('.loadingDiv').animate({
+
+
+            rotation: 360
+        }, {
+            step: function (now, fx) {
+
+                $(this).css('-webkit-transform', 'rotateY(' + now + 'deg)');
+                $(this).css('-moz-transform', 'rotateY(' + now + 'deg)');
+                $(this).css('transform', 'rotateY(' + now + 'deg)');
+
+            }
+        }, 'easeInOutQuint');
+        $('.grid').masonry({
+            // options...
+            itemSelector: '.grid-item',
+            columnWidth: 200
+        });
+    });
+
 });
 

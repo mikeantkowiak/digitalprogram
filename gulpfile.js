@@ -8,30 +8,6 @@ bs.init({
   server: "../digitalprogram"
 });
 
-// var useref = require('gulp-useref');
-// var uglify = require('gulp-uglify');
-// var gulpIf = require('gulp-if');
-// var cssnano = require('gulp-cssnano');
-// var imagemin = require('gulp-imagemin');
-// var cache = require('gulp-cache');
-// var del = require('del');
-// var runSequence = require('run-sequence');
-
-// Basic Gulp task syntax
-
-
-// Development Tasks 
-// -----------------
-
-// Start browserSync server
-/*  gulp.task('browserSync', function() {
-   browserSync({
-     server: {
-       baseDir: '../digitalprogram'
-     }
-   })
- }) */
-
 gulp.task('sass', function() {
   return gulp.src('assets/scss/styles.scss') // Gets all files ending with .scss in app/scss and children dirs
     .pipe(sass().on('error', sass.logError)) // Passes it through a gulp-sass, log errors to console

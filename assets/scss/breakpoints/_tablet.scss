@@ -25,15 +25,23 @@ nav{
 } 
 
 #content{
-	width:70%;
+	width:100%;
+	max-width:1080px;
 }
 
-.modal-content {
-	width: 70%;
-
-}
 .ma-grid { 
-    grid-template-columns: 1fr 1fr 1fr;
+	&.ma-grid-portfolio { 
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+    &.portfolio-grid{
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	&.portfolio-holder-grid{
+		grid-template-columns: 1fr 1fr;
+	}
+	&.project-grid-lg-2{
+		grid-template-columns: 1fr 1fr;
+    }
 }
 
 .span_3_of_3,

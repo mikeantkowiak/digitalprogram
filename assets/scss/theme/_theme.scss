@@ -1,10 +1,8 @@
 .tint {
     position: relative;
     float: left;
-    /* Firefox */
-    box-shadow: 0px 0px 10px #000000;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
     &:before {
-      
         background: rgba(26,26,26,0.8);
         opacity: 0;
         color: #FFF;
@@ -40,4 +38,8 @@
         }
     }
     
+}
+
+.primary-color{
+    color: $color-site-branding;
 }

@@ -111,24 +111,24 @@ html.remodal-is-locked {
   position: relative;
 
   outline: none;
-overflow: auto;
+  overflow: auto;
   -webkit-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  text-size-adjust: 100%; 
+  text-size-adjust: 100%;
 }
 
 .remodal-is-initialized {
   /* Disable Anti-FOUC */
   display: inline-block;
-}
+} 
 
 
 
 .wrapper {
 
   -webkit-transform: translateZ(0);
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   /* webkit flicker fix */
@@ -139,10 +139,11 @@ overflow: auto;
     position: absolute;
     width: 80%;
     bottom: 100%;
-    font-weight:700;
+    font-weight: 700;
+    text-align:center;
     //bottom: 100%;
-    background: $color-site-branding;
-    color: #262626;
+    background: $color-main-nav-bg;
+    color: $color-site-branding;
     display: block;
     margin-bottom: 15px;
     opacity: 0;
@@ -150,18 +151,22 @@ overflow: auto;
     pointer-events: none;
     transform: translateY(10px);
     transition: all .25s ease-out;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
-    h3{
-        font-family: azo-sans-web, Arial, Helvetica, sans-serif;
-      font-size:1em;  
-      font-weight:900;
-    }
-    a{
-      color: $color-main-nav;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.28);
+
+    h3 {
       font-family: azo-sans-web, Arial, Helvetica, sans-serif;
-      font-size:0.8em;  
-      cursor:pointer;
+      font-size: 1em;
+      font-weight: 900;
+      color: #FFF;
     }
+
+    a {
+      color: $color-site-branding;
+      font-family: azo-sans-web, Arial, Helvetica, sans-serif;
+      font-size: 0.8em;
+      cursor: pointer;
+    }
+
     /* This bridges the gap so you can mouse into the tooltip without it disappearing */
     &:before {
       bottom: -20px;
@@ -172,6 +177,7 @@ overflow: auto;
       position: absolute;
       width: 100%;
     }
+
     /* CSS Triangles - see Trevor's post */
     &:after {
       border-left: solid transparent 10px;
@@ -269,9 +275,11 @@ overflow: auto;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
-  max-width:100%;
+  max-width: 100%;
   margin-bottom: 0px;
   padding: 35px;
+  font-family: azo-sans-web;
+  text-align: left;
 
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -279,13 +287,21 @@ overflow: auto;
   color: #2b2e38;
   background: #fff;
   text-align: center;
-  .port-img{
-      width:100%;
-        img{
-          max-width:100%;
-          width:100%;
-        }
-      }
+
+  .port-img {
+    box-sizing:border-box;
+    width: 100%;
+    padding:2em;
+    &.no-padding{
+      padding:0;
+    }
+    img {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+  h2{
+    color: $color-main-nav;
   }
 }
 
@@ -389,12 +405,12 @@ overflow: auto;
 
 .remodal-confirm {
   color: #fff;
-  background: #5bcfdd;
+  background: $color-site-branding;
 }
 
-.remodal-confirm:hover,
+.remodal-confirm:hover, 
 .remodal-confirm:focus {
-  background: #66bb6a;
+  background: darken($color-site-branding, 15%); 
 }
 
 .remodal-cancel {
@@ -423,13 +439,14 @@ overflow: auto;
   display: block;
   width: 100%;
   margin: 0 auto;
-  text-align:center;
+  text-align: center;
+
   p {
-      color: #000;
-      width: 100%;
-      margin: 0 auto;
-      margin-bottom: 2em;
-  
+    color: #000;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 2em;
+
   }
 }
 
@@ -438,56 +455,56 @@ overflow: auto;
 
 @-webkit-keyframes remodal-opening-keyframes {
   from {
-      -webkit-transform: translateX(2000px);
-      -webkit-transform: scale(1.05);
-      transform: scale(1.05);
-      transform: translateX(2000px);
-      opacity: 1;
+    -webkit-transform: translateX(2000px);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    transform: translateX(2000px);
+    opacity: 1;
   }
 
   to {
-      -webkit-transform: translateX(0px);
-      -webkit-transform: none;
-      transform: none;
+    -webkit-transform: translateX(0px);
+    -webkit-transform: none;
+    transform: none;
 
-      opacity: 1;
+    opacity: 1;
   }
 }
 
 @keyframes remodal-opening-keyframes {
   from {
-      -webkit-transform: translateX(2000px);
-      -webkit-transform: scale(2);
-      transform: scale(1.05);
-      transform: translateX(2000px);
-      opacity: 1;
+    -webkit-transform: translateX(2000px);
+    -webkit-transform: scale(2);
+    transform: scale(1.05);
+    transform: translateX(2000px);
+    opacity: 1;
   }
 
   to {
-      -webkit-transform: translateX(0px);
-      -webkit-transform: none;
-      transform: none;
-      transform: translateX(0px);
-      opacity: 1;
+    -webkit-transform: translateX(0px);
+    -webkit-transform: none;
+    transform: none;
+    transform: translateX(0px);
+    opacity: 1;
   }
 }
 
 @-webkit-keyframes remodal-closing-keyframes {
   from {
 
-      -webkit-transform: translateX(0px);
-      -webkit-transform: none;
-      transform: none;
-      transform: translateX(0px);
-      opacity: 1;
+    -webkit-transform: translateX(0px);
+    -webkit-transform: none;
+    transform: none;
+    transform: translateX(0px);
+    opacity: 1;
   }
 
   to {
-      -webkit-transform: translateX(-2000px);
-      -webkit-transform: scale(2);
-      transform: scale(1.05);
-      transform: translateX(-2000px);
-      opacity: 1;
+    -webkit-transform: translateX(-2000px);
+    -webkit-transform: scale(2);
+    transform: scale(1.05);
+    transform: translateX(-2000px);
+    opacity: 1;
 
   }
 
@@ -495,20 +512,20 @@ overflow: auto;
 
 @keyframes remodal-closing-keyframes {
   from {
-      -webkit-transform: translateX(0px);
-      -webkit-transform: none;
-      transform: none;
-      transform: translateX(0px);
-      opacity: 1;
+    -webkit-transform: translateX(0px);
+    -webkit-transform: none;
+    transform: none;
+    transform: translateX(0px);
+    opacity: 1;
   }
 
   to {
 
-      -webkit-transform: translateX(-2000px);
-      -webkit-transform: scale(2);
-      transform: scale(1.05);
-      transform: translateX(-2000px);
-      opacity: 1;
+    -webkit-transform: translateX(-2000px);
+    -webkit-transform: scale(2);
+    transform: scale(1.05);
+    transform: translateX(-2000px);
+    opacity: 1;
 
 
 
@@ -517,41 +534,41 @@ overflow: auto;
 
 @-webkit-keyframes remodal-overlay-opening-keyframes {
   from {
-      opacity: 0;
+    opacity: 0;
   }
 
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
 @keyframes remodal-overlay-opening-keyframes {
   from {
-      opacity: 0;
+    opacity: 0;
   }
 
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
 @-webkit-keyframes remodal-overlay-closing-keyframes {
   from {
-      opacity: 1;
+    opacity: 1;
   }
 
   to {
-      opacity: 0;
+    opacity: 0;
   }
 }
 
 @keyframes remodal-overlay-closing-keyframes {
   from {
-      opacity: 1;
+    opacity: 1;
   }
 
   to {
-      opacity: 0;
+    opacity: 0;
   }
 }
 
@@ -560,7 +577,7 @@ overflow: auto;
 
 @media only screen and (min-width: 641px) {
   .remodal {
-      max-width: 1000%;
+    max-width: 1000%;
   }
 }
 
