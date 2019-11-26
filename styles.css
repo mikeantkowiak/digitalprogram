@@ -3137,8 +3137,7 @@ iPad 3
   nav ul {
     font-size: 1.68em; }
   #content {
-    width: 100%;
-    max-width: 1080px; }
+    width: 70%; }
   .ma-grid.ma-grid-portfolio {
     grid-template-columns: 1fr 1fr 1fr; }
   .ma-grid.portfolio-grid {
