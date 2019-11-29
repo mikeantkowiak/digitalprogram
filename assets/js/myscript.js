@@ -1,68 +1,30 @@
 
 jQuery(document).ready(function ($) {
-    // Defining a function to set size for #hero 
+    
     function fullscreen() {
-        jQuery('#hero').css({
-            width: jQuery(window).width(),
-            height: jQuery(window).height()
+        $('#hero').css({
+            width: $(window).width(),
+            height: $(window).height()
         });
     }
+    $('.loadingDiv').animate({
+        opacity: '1',
+        rotation: 360
+    },{
+        step: function (now, fx) {
+            $(this).css('-webkit-transform', 'rotateY(' + now + 'deg)');
+            $(this).css('-moz-transform', 'rotateY(' + now + 'deg)');
+            $(this).css('transform', 'rotateY(' + now + 'deg)');
+        }
+    }, 'easeInOutQuint');
 
     fullscreen();
+    jQuery("body").show();
 
     // Run the function in case of window resize
-    jQuery(window).resize(function () {
+    $(window).resize(function () {
         fullscreen();
     });
-
-    (function () {
-        var v = document.getElementsByClassName("youtube-player");
-        for (var n = 0; n < v.length; n++) {
-            var p = document.createElement("div");
-            p.innerHTML = labnolThumb(v[n].dataset.id);
-            p.onclick = labnolIframe;
-            v[n].appendChild(p);
-        }
-    })();
-
-    function labnolThumb(id) {
-        return '<img class="youtube-thumb" src="//i.ytimg.com/vi/' + id + '/hqdefault.jpg"><div class="play-button"></div>';
-    }
-
-    function labnolIframe() {
-        var iframe = document.createElement("iframe");
-        iframe.setAttribute("src", "//www.youtube.com/embed/" + this.parentNode.dataset.id + "?autoplay=0&autohide=2&border=0&wmode=opaque&enablejsapi=1&controls=0&showinfo=0");
-        iframe.setAttribute("frameborder", "0");
-        iframe.setAttribute("id", "youtube-iframe");
-        this.parentNode.replaceChild(iframe, this);
-    }
-
-
-
-
-    jQuery(document).ready(function () {
-        jQuery("body").show();
-
-    });
-
-    // window.REMODAL_GLOBALS = {
-    //   NAMESPACE: 'remodal',
-    //   DEFAULTS: {
-    //     hashTracking: true,
-    //     closeOnConfirm: true,
-    //     closeOnCancel: true,
-    //     closeOnEscape: true,
-    //     closeOnOutsideClick: true,
-    //     modifier: ''
-    //   }
-    // };
-
-    $(document).ready(function () {
-
-    });
-
-
-
 
     $(window).ready(function () {
         $('#loading').delay(1500).fadeOut();
@@ -73,18 +35,12 @@ jQuery(document).ready(function ($) {
         $('.coming-soon-text').delay(1500).animate({
             opacity: "1",
         }, 1500);
-
-
-
     });
     $(document).ready(function () {
         var classCycle = ['imageCycle1', 'imageCycle2', 'imageCycle3', 'imageCycle4'];
-
         var randomNumber = Math.floor(Math.random() * classCycle.length);
         var classToAdd = classCycle[randomNumber];
-
         $('#hero').addClass(classToAdd);
-
     });
 
 
@@ -96,9 +52,7 @@ jQuery(document).ready(function ($) {
 
     });
 
-    $(document).ready(function () {
-
-        /** 
+      /** 
          * This part does the "fixed navigation after scroll" functionality
          * We use the jQuery function scroll() to recalculate our variables as the 
          * page is scrolled/
@@ -106,20 +60,14 @@ jQuery(document).ready(function ($) {
         $(window).scroll(function () {
             var window_top = $(window).scrollTop(); // the "12" should equal the margin-top value for nav.stick
             var div_top = $('#nav-anchor').offset().top;
-
-
             if (window_top > div_top) {
-
                 $('nav').addClass('stick');
                 $('#content').addClass('extraspace');
                 $('#design h2').addClass('main-header-space');
-
-
             } else {
                 $('nav').removeClass('stick');
                 $('#content').removeClass('extraspace');
                 $('#design h2').removeClass('main-header-space');
-
             }
         });
 
@@ -129,15 +77,12 @@ jQuery(document).ready(function ($) {
          */
         $("nav a").click(function (evn) {
             evn.preventDefault();
-
             $('html,body').scrollTo(this.hash, this.hash, { offset: -80});
         });
         $(".arrow-down").click(function (evn) {
             evn.preventDefault();
-
             $('html,body').scrollTo(this.hash, this.hash, { offset: -80 });
         });
-
 
         /**
          * This part handles the highlighting functionality.
@@ -180,42 +125,9 @@ jQuery(document).ready(function ($) {
                 }
             }
         });
-    });
 
     $.extend($.scrollTo.defaults, {
 
-    });
-    // Site JS Scripts 
-    $(function () {
-        $("img.lazy").lazyload();
-    });
-    // external js: masonry.pkgd.js, imagesloaded.pkgd.js
-
-
-    $(document).ready(function () {
-
-        $('.loadingDiv').animate({
-            opacity: '1'
-        });
-
-        $('.loadingDiv').animate({
-
-
-            rotation: 360
-        }, {
-            step: function (now, fx) {
-
-                $(this).css('-webkit-transform', 'rotateY(' + now + 'deg)');
-                $(this).css('-moz-transform', 'rotateY(' + now + 'deg)');
-                $(this).css('transform', 'rotateY(' + now + 'deg)');
-
-            }
-        }, 'easeInOutQuint');
-        $('.grid').masonry({
-            // options...
-            itemSelector: '.grid-item',
-            columnWidth: 200
-        });
     });
 
 });
