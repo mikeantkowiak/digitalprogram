@@ -2270,7 +2270,7 @@ p {
 
 .full-container {
   position: relative;
-  margin-bottom: 8em; }
+  margin-bottom: 4em; }
   .full-container:after {
     content: "";
     clear: both;
@@ -2406,7 +2406,7 @@ p {
 
 #content {
   display: block;
-  padding: 100px 1.618em 1.618em;
+  padding: 1em 1.618em 1.618em;
   text-align: center;
   width: auto;
   box-sizing: border-box;
@@ -2484,6 +2484,12 @@ section#contact {
     margin-top: 2em;
     grid-template-columns: 1fr;
     gap: 20px 20px; }
+
+.portfolio-main-image {
+  margin-bottom: 2em; }
+
+.mobile-only {
+  display: block; }
 
 .techinical-list {
   margin: 0;
@@ -3137,36 +3143,9 @@ iPad 3
   nav ul {
     font-size: 1.68em; }
   #content {
-    width: 70%; }
+    width: 90%; }
   .ma-grid.ma-grid-portfolio {
-    grid-template-columns: 1fr 1fr 1fr; }
-  .ma-grid.portfolio-grid {
-    grid-template-columns: 1fr 1fr 1fr; }
-  .ma-grid.portfolio-holder-grid {
-    grid-template-columns: 1fr 1fr; }
-  .ma-grid.project-grid-lg-2 {
-    grid-template-columns: 1fr 1fr; }
-  .span_3_of_3,
-  .span_2_of_3,
-  .span_1_of_3 {
-    width: 32.2%; }
-  .left-image {
-    width: 55%;
-    left: -80%;
-    top: 0; }
-    .left-image-2 {
-      text-align: right; }
-      .left-image-2 .content-block {
-        width: 49%; }
-    .left-image.hero-3 {
-      left: 0;
-      top: -110px; }
-  .right-image {
-    width: 63%;
-    right: -168px;
-    top: -110px; }
-    .right-image-2 .content-block {
-      width: 50%; } }
+    grid-template-columns: 1fr 1fr 1fr; } }
 
 /* Desktops and laptops ----------- */
 @media only screen and (min-width: 1224px) {
@@ -3197,7 +3176,43 @@ iPad 3
     background: url(assets/img/logo-symbol.png) no-repeat top center; }
   #site-logo {
     width: 200px;
-    height: 200px; } }
+    height: 200px; }
+  .mobile-only {
+    display: none; }
+  #content {
+    width: 70%;
+    padding-top: 100px; }
+  .full-container {
+    margin-bottom: 8em; }
+  .ma-grid.ma-grid-portfolio {
+    grid-template-columns: 1fr 1fr 1fr; }
+  .ma-grid.portfolio-grid {
+    grid-template-columns: 1fr 1fr 1fr; }
+  .ma-grid.portfolio-holder-grid {
+    grid-template-columns: 1fr 1fr; }
+  .ma-grid.project-grid-lg-2 {
+    grid-template-columns: 1fr 1fr; }
+  .span_3_of_3,
+  .span_2_of_3,
+  .span_1_of_3 {
+    width: 32.2%; }
+  .left-image {
+    width: 55%;
+    left: -80%;
+    top: 0; }
+    .left-image-2 {
+      text-align: right; }
+      .left-image-2 .content-block {
+        width: 49%; }
+    .left-image.hero-3 {
+      left: 0;
+      top: -110px; }
+  .right-image {
+    width: 63%;
+    right: -168px;
+    top: -110px; }
+    .right-image-2 .content-block {
+      width: 50%; } }
 
 /* Large screens ----------- */
 @media only screen and (min-width: 1824px) {

@@ -22,56 +22,14 @@ nav{
 	ul {
 		font-size: 1.68em;
 	}
-} 
+}
 
 #content{
-	width:70%;
+	width:90%;
 }
 
 .ma-grid { 
 	&.ma-grid-portfolio { 
 		grid-template-columns: 1fr 1fr 1fr;
 	}
-    &.portfolio-grid{
-		grid-template-columns: 1fr 1fr 1fr;
-	}
-	&.portfolio-holder-grid{
-		grid-template-columns: 1fr 1fr;
-	}
-	&.project-grid-lg-2{
-		grid-template-columns: 1fr 1fr;
-    }
 }
-
-.span_3_of_3,
-.span_2_of_3,
-.span_1_of_3 {
-	width: 32.2%;
-}
-
-.left-image{
-	width: 55%;
-	left:-80%;
-	top:0;
-	&-2 {
-		text-align:right;
-		.content-block {
-			width: 49%;
-		}
-	}
-	&.hero-3 {
-		left: 0;
-		top: -110px;
-	
-	}
-}
-.right-image {
-	width: 63%;
-    right: -168px;
-	top: -110px;
-	&-2 {
-		.content-block {
-			width: 50%;
-		}
-	} 
-}	

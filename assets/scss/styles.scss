@@ -90,7 +90,7 @@ p {
 
 .full-container {
     position: relative;
-    margin-bottom:8em;
+    margin-bottom:4em;
     &:after{
         content: "";
         clear: both;
@@ -256,7 +256,7 @@ p {
 
 #content {
     display:block;
-    padding: 100px 1.618em 1.618em;
+    padding: 1em 1.618em 1.618em;
     text-align: center;
     width: auto;
     box-sizing: border-box;
@@ -356,6 +356,12 @@ section#contact {
         grid-template-columns: 1fr;
         gap: 20px 20px;
     }
+}
+.portfolio-main-image{
+    margin-bottom:2em;
+}
+.mobile-only{
+    display:block;
 }
 
 .techinical-list{
