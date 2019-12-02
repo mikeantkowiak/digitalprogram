@@ -1,0 +1,99 @@
+/* Hero */
+#hero {
+    box-sizing: border-box;
+    overflow: hidden;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    height: 100vh;
+}
+
+.coming-soon-text {
+    opacity: 0;
+}
+
+.hero{
+    right: -80px;
+    top: -110px;
+    &-1{
+        background: url() no-repeat top center;
+        background-position: right;
+        background-size: contain;
+    }
+    &-2{
+        background: url(assets/img/1screen.png) no-repeat top center;
+        background-position: right;
+        background-size: contain;
+    }
+    &-3{
+        background: url(assets/img/branding-3.png) no-repeat top center;
+        background-position: right;
+        background-size: contain;
+    }
+}
+
+#hero {
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    box-sizing: border-box;
+}
+#csshero {
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    box-sizing: border-box;
+    height: 100vh;
+}
+.hero-img {
+    margin-top: 2em;
+
+}
+
+.imageCycle1 {
+    background-image: url(assets/img/desktop.jpg);
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/desktop.jpg', sizingMethod='scale');
+
+}
+
+.imageCycle2 {
+    background-image: url(assets/img/desktop.jpg);
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/desktop.jpg', sizingMethod='scale');
+}
+
+.imageCycle3 {
+    background-image: url(assets/img/desktop.jpg);
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/desktop.jpg', sizingMethod='scale');
+}
+
+.imageCycle4 {
+    background-image: url(assets/img/desktop.jpg);
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/desktop.jpg', sizingMethod='scale');
+}

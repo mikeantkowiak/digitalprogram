@@ -1,3 +1,6 @@
+a {
+    color: #d6d6d6;
+}
 .button {
     padding:1em 1.618em 1em 1.618em;
     background: #5bcfdd;
@@ -12,7 +15,15 @@
         box-shadow: inset 0 0 0 5px #5bcfdd;
     }
 }
-
+.arrow-down {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 3em;
+    color: #c3c3c3;
+    width: 40px;
+    background: url(assets/img/arrow.svg) no-repeat;
+    background-size: contain;
+}
 .arrow-down{
     display:block;
     widows: 100px;

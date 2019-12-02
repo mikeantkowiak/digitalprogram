@@ -1,0 +1,31 @@
+/*Masonary Grid */
+.ma-grid { 
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px 20px;
+    text-align:left;
+    margin-bottom:20px;
+    &.portfolio-grid{
+        margin-top:2em; 
+        grid-template-columns: 1fr;
+        gap: 20px 20px;
+    }
+    &.portfolio-holder-grid{
+        margin-top:2em; 
+        grid-template-columns: 1fr;
+        gap: 20px 20px;
+    }
+    &.project-grid, &.project-grid-lg-2{
+        margin-top:2em; 
+        grid-template-columns: 1fr;
+        gap: 20px 20px;
+    }
+}
+
+
+.col {
+    img{
+        width:100%;
+    }
+}
+

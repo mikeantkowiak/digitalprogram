@@ -1,0 +1,28 @@
+#loading {
+    background: $color-main-bg;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0;
+    margin: 0;
+
+}
+
+.loadingDiv {
+    background: url(assets/img/loading-cross.svg)transparent no-repeat top center;
+    border-radius: 50%;
+    color: #FFFFFF;
+    opacity: 0;
+    height: 100px;
+    width: 100px;
+    left: 50%;
+    line-height: 100px;
+    margin: -50px 0 0 -50px;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+}

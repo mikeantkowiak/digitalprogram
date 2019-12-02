@@ -1,3 +1,10 @@
+.primary-color{
+    color: $color-site-branding;
+}
+
+::-moz-selection { background: $color-site-branding; }
+::selection { background: $color-site-branding; }
+
 .tint {
     position: relative;
     float: left;
@@ -40,6 +47,29 @@
     
 }
 
-.primary-color{
-    color: $color-site-branding;
+.title-block-hr {
+    display: block;
+    width: 180px;
+    height: 3px;
+    background: #efefef;
+    border: none;
+    margin: 4em auto;
+}
+
+.techinical-list{
+    margin:0;
+    padding:0;
+    li{
+        list-style:none;
+        color:#000;
+        margin-top:0.5em;
+        p{
+            margin:0.5em 0 0;
+            padding:0;
+            color:#000;
+            span{
+                color:$color-site-branding;
+            }
+        }
+    }
 }
