@@ -611,19 +611,7 @@
     remodal.$overlay.addClass(remodal.settings.modifier).show();
     remodal.$wrapper.show().scrollTop(0);
     remodal.$modal.focus();
-      
-      // init Masonry
-var $grid = $('.grid').masonry({
-  itemSelector: '.grid-item',
-  percentPosition: true,
-  columnWidth: '.grid-sizer'
-});
-// layout Isotope after each image loads
-$grid.imagesLoaded().progress( function() {
-  $grid.masonry();
-});  
-
-
+  
     syncWithAnimation(
       function() {
         setState(remodal, STATES.OPENING);

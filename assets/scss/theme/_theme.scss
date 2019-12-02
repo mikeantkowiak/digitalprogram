@@ -2,8 +2,8 @@
     color: $color-site-branding;
 }
 
-::-moz-selection { background: $color-site-branding; }
-::selection { background: $color-site-branding; }
+::-moz-selection { background: $color-site-branding-lighter; }
+::selection { background: $color-site-branding-lighter; }
 
 .tint {
     position: relative;

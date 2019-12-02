@@ -7,3 +7,4 @@ $color-nav-link:    #ececec;
 $color-body-text:    #ececec;
 $color-global-link:    #5e9dc7; 
 $color-site-branding:   #5bcfdd;
+$color-site-branding-lighter: lighten($color-site-branding, 15%); 
