@@ -2147,18 +2147,6 @@ html.remodal-is-locked {
   padding: 0;
   border: 0; }
 
-/* Custom CSS */
-.modal-content {
-  display: block;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center; }
-  .modal-content p {
-    color: #000;
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 2em; }
-
 /* Keyframes
  ========================================================================== */
 @-webkit-keyframes remodal-opening-keyframes {
@@ -2256,8 +2244,18 @@ html.remodal-is-locked {
 
 /* Remodal Overrides */
 .modal-content {
+  display: block;
   max-width: 1080px;
-  margin: 0 auto; }
+  width: 100%;
+  margin: 0 auto;
+  text-align: center; }
+  .modal-content p {
+    color: #000;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 2em; }
+  .modal-content h3 {
+    color: #5bcfdd; }
 
 /* Grid - CSS Grid Implementation */
 /*Masonary Grid */
@@ -2777,10 +2775,10 @@ nav.stick {
   color: #5bcfdd; }
 
 ::-moz-selection {
-  background: #5bcfdd; }
+  background: #9ae2ea; }
 
 ::selection {
-  background: #5bcfdd; }
+  background: #9ae2ea; }
 
 .tint {
   position: relative;
