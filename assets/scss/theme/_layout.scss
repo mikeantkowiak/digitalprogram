@@ -1,0 +1,200 @@
+html {
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display:none;
+    background-color: $color-main-bg;
+    color: #fff;
+    font-style: normal;
+    text-align: center;
+    background-size: cover;
+    line-height:1.4;
+    margin: 0;
+    padding: 0;
+    font-family: azo-sans-web;
+}
+
+#wrapper {
+    overflow: hidden;
+}
+.full-container {
+    position: relative;
+    margin-bottom:4em;
+    &:after{
+        content: "";
+        clear: both; 
+        display: table;
+    }
+    
+}
+
+main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+main section {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10em;
+    margin-top: 0em;
+}
+
+.section {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1em;
+    max-width: 1500px;
+    box-sizing: border-box;
+}
+
+main section ul {
+    background-color: #337800;
+    margin: 0;
+    padding: 0;
+}
+
+main section ul li {
+    background-color: #efefef;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1em;
+}
+
+main section ul li a {
+    display: block;
+    margin: 0;
+    padding: 0
+}
+
+
+.midimage {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+.portfolio-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+
+.left-image {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    background: url(assets/img/1screen.png) no-repeat top center;
+    background-position: left;
+    background-size: contain;
+    left: 0;
+    top:-360px;
+    z-index:-1;
+}
+
+.left-image.hero-3 {
+    background: url(assets/img/branding-3.png) no-repeat top center;
+    background-position: left;
+    background-size: contain;
+    right: 0;
+    top: -400px;
+
+}
+
+/*  SECTIONS  */
+section {
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+section#contact {
+    margin-top: 4em;
+}
+
+#content {
+    display:block;
+    padding: 1em 1.618em 1.618em;
+    text-align: center;
+    width: auto;
+    box-sizing: border-box;
+    margin: 0px auto;
+
+    h2 {
+        margin: 0 0 1em 0;
+        letter-spacing: 0.1em;
+    }
+ 
+    &.extraspace {
+        padding-top: 160px;
+    }
+}
+
+
+/* Portoflio Sections */
+.portfolio-content  {
+    margin-bottom:4em;
+}
+.port-img{
+    max-width: 100%; height: auto 
+}
+
+
+
+
+
+.left-image-2 .content-block {
+    width: 100%;
+    float: right;
+    padding-top: 3em;
+}
+
+.left-image-2 {
+    position: relative;
+    padding-top: 3em;
+    width: 99%;
+    height: 800px;
+    text-align: left;
+    background-size: contain;
+    background-position: right;
+}
+
+.portfolio-main-image{
+    margin-bottom:2em;
+}
+
+
+/* Footer */
+footer {
+    padding: 30px 0px;
+    text-align: center;
+    background: #000;
+    background: url('assets/img/lake-bg-duo.jpg') no-repeat top center;
+    background-size: cover;
+    section{
+        margin-bottom: 1em;
+    }
+}
+

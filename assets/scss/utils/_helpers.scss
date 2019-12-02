@@ -1,0 +1,43 @@
+
+/* GENRAL LAYOUT HELPERS */
+.morepadd {
+    top: 55px;
+}
+
+.clearboth {
+    clear: both;
+}
+
+.mobile-only{
+    display:block;
+}
+
+.ttp {
+    margin-top: 58px;
+}
+
+.stick-body {
+    position: fixed;
+    display: block;
+    width: 100%;
+    top: 0;
+    height: 58px;
+    z-index: 20000000;
+}
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+.group:last-child {
+    zoom: 1;
+    /* For IE 6/7 */
+    padding-bottom: 1em;
+}
