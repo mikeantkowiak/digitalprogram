@@ -2337,12 +2337,6 @@ html.remodal-is-locked {
     background-position: right;
     background-size: contain; }
 
-#hero {
-  background-size: cover;
-  position: relative;
-  background-position: center;
-  box-sizing: border-box; }
-
 #csshero {
   background-size: cover;
   position: relative;
@@ -2353,45 +2347,26 @@ html.remodal-is-locked {
 .hero-img {
   margin-top: 2em; }
 
-.imageCycle1 {
-  background-image: url(assets/img/desktop.jpg);
-  background-size: cover;
+.imageCycle {
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/desktop.jpg', sizingMethod='scale'); }
-
-.imageCycle2 {
-  background-image: url(assets/img/desktop.jpg);
   background-size: cover;
-  position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/desktop.jpg', sizingMethod='scale'); }
-
-.imageCycle3 {
-  background-image: url(assets/img/desktop.jpg);
-  background-size: cover;
-  position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/desktop.jpg', sizingMethod='scale'); }
-
-.imageCycle4 {
-  background-image: url(assets/img/desktop.jpg);
-  background-size: cover;
-  position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/desktop.jpg', sizingMethod='scale'); }
+  /* &2{
+        background-image: url(assets/img/field-bg.jpg);
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/field-bg.jpg', sizingMethod='scale');
+    }
+    &3{
+        background-image: url(assets/img/lake-bg.jpg);
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/lake-bg.jpg', sizingMethod='scale');
+    }
+    &4{
+        background-image: url(assets/img/montreal-bg.jpg);
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/montreal-bg.jpg', sizingMethod='scale'); 
+    } */ }
+  .imageCycle1 {
+    background-image: url(assets/img/desktop.jpg);
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/desktop.jpg', sizingMethod='scale'); }
 
 /* Typography */
 /* TYPOGRAPHY BASE */
@@ -2636,11 +2611,11 @@ section {
   margin: 0px; }
 
 section#contact {
-  margin-top: 4em; }
+  margin-top: 0; }
 
 #content {
   display: block;
-  padding: 1em 1.618em 1.618em;
+  padding: 100px 1.618em 0;
   text-align: center;
   width: auto;
   box-sizing: border-box;
@@ -2866,12 +2841,6 @@ nav.stick {
     background-position: right;
     background-size: contain; }
 
-#hero {
-  background-size: cover;
-  position: relative;
-  background-position: center;
-  box-sizing: border-box; }
-
 #csshero {
   background-size: cover;
   position: relative;
@@ -2882,45 +2851,26 @@ nav.stick {
 .hero-img {
   margin-top: 2em; }
 
-.imageCycle1 {
-  background-image: url(assets/img/desktop.jpg);
-  background-size: cover;
+.imageCycle {
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/desktop.jpg', sizingMethod='scale'); }
-
-.imageCycle2 {
-  background-image: url(assets/img/desktop.jpg);
   background-size: cover;
-  position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/desktop.jpg', sizingMethod='scale'); }
-
-.imageCycle3 {
-  background-image: url(assets/img/desktop.jpg);
-  background-size: cover;
-  position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/desktop.jpg', sizingMethod='scale'); }
-
-.imageCycle4 {
-  background-image: url(assets/img/desktop.jpg);
-  background-size: cover;
-  position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/desktop.jpg', sizingMethod='scale'); }
+  /* &2{
+        background-image: url(assets/img/field-bg.jpg);
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/field-bg.jpg', sizingMethod='scale');
+    }
+    &3{
+        background-image: url(assets/img/lake-bg.jpg);
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/lake-bg.jpg', sizingMethod='scale');
+    }
+    &4{
+        background-image: url(assets/img/montreal-bg.jpg);
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/montreal-bg.jpg', sizingMethod='scale'); 
+    } */ }
+  .imageCycle1 {
+    background-image: url(assets/img/desktop.jpg);
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/desktop.jpg', sizingMethod='scale'); }
 
 /*Social Icons SVG Code */
 .soc {
@@ -3229,38 +3179,35 @@ nav.stick {
   .tint:before {
     font-size: 2em; }
   section#contact {
-    width: 90%;
-    margin-top: 4em; } }
+    width: 90%; } }
 
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 320px) {
   /* Styles */
   section#contact {
     width: 90%;
-    margin-top: 4em; } }
+    padding-top: 4em; } }
 
 @media only screen and (min-width: 480px) {
   .tint:before {
     font-size: 1em; }
   section#contact {
     width: 80%;
-    margin-top: 4em; } }
+    padding-top: 4em; } }
 
 @media only screen and (min-width: 768px) {
   .tint:before {
     font-size: 2em; }
   section#contact {
-    width: 60%;
-    margin-top: 16em; }
+    width: 40%;
+    margin-top: 0;
+    padding-top: 4em; }
   h1 {
     font-size: 2.4em; }
   .header-info h2 {
     font-size: 1em; }
   h3 {
     font-size: 0.8em; }
-  section#contact {
-    width: 40%;
-    margin-top: 10em; }
   #site-logo {
     width: 200px;
     height: 200px; }

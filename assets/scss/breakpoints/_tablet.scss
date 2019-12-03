@@ -3,8 +3,9 @@
 }
 
 section#contact {
-	width: 60%;
-	margin-top: 16em;
+	width: 40%;
+	margin-top:0;
+	padding-top: 4em;
 }
 h1 {
 	font-size: 2.4em;
@@ -15,12 +16,7 @@ h1 {
 h3 {
 	font-size: 0.8em;
 }
-section {
-	&#contact {
-		width: 40%;
-		margin-top: 10em;
-	}
-}
+
 #site-logo {
 	width: 200px;
 	height: 200px;

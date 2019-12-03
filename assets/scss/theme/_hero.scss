@@ -32,12 +32,6 @@
     }
 }
 
-#hero {
-    background-size: cover;
-    position: relative;
-    background-position: center;
-    box-sizing: border-box;
-}
 #csshero {
     background-size: cover;
     position: relative;
@@ -50,50 +44,25 @@
 
 }
 
-.imageCycle1 {
-    background-image: url(assets/img/desktop.jpg);
-    background-size: cover;
+.imageCycle{
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/desktop.jpg', sizingMethod='scale');
-
-}
-
-.imageCycle2 {
-    background-image: url(assets/img/desktop.jpg);
     background-size: cover;
-    position: relative;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/desktop.jpg', sizingMethod='scale');
-}
-
-.imageCycle3 {
-    background-image: url(assets/img/desktop.jpg);
-    background-size: cover;
-    position: relative;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/desktop.jpg', sizingMethod='scale');
-}
-
-.imageCycle4 {
-    background-image: url(assets/img/desktop.jpg);
-    background-size: cover;
-    position: relative;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/desktop.jpg', sizingMethod='scale');
+    &1{
+        background-image: url(assets/img/desktop.jpg);
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/desktop.jpg', sizingMethod='scale');
+    }
+    /* &2{
+        background-image: url(assets/img/field-bg.jpg);
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/field-bg.jpg', sizingMethod='scale');
+    }
+    &3{
+        background-image: url(assets/img/lake-bg.jpg);
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/lake-bg.jpg', sizingMethod='scale');
+    }
+    &4{
+        background-image: url(assets/img/montreal-bg.jpg);
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='assets/img/montreal-bg.jpg', sizingMethod='scale'); 
+    } */
 }
