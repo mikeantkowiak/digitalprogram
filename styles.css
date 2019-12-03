@@ -3185,13 +3185,15 @@ nav.stick {
 @media only screen and (max-width: 320px) {
   /* Styles */
   section#contact {
-    width: 90%; } }
+    width: 90%;
+    padding-top: 4em; } }
 
 @media only screen and (min-width: 480px) {
   .tint:before {
     font-size: 1em; }
   section#contact {
-    width: 80%; } }
+    width: 80%;
+    padding-top: 4em; } }
 
 @media only screen and (min-width: 768px) {
   .tint:before {
