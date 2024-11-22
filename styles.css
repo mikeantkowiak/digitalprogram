@@ -2786,7 +2786,7 @@ nav.stick {
     animation-play-state: running;
     background: rgba(13, 93, 103, 0.9);
     opacity: 1;
-    height: 55%; }
+    }
     .tint:hover:before {
       opacity: 1; }
 
